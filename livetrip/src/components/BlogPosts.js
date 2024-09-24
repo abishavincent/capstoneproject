@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const blogPosts = [
   {
-    imgSrc: 'https://drive.google.com/file/d/1xZcEYXa-Ggm4lXbB2mCRBNsETMPeDly1/view?usp=drive_link',
+    imgSrc: require('../img/post1.jpg'),
     title: 'Trip to Indonesia',
     description: 'Discover the lush landscapes and vibrant culture of Indonesia, a paradise for every traveler.',
   },
