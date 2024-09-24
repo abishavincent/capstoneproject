@@ -1,0 +1,79 @@
+
+.home {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-section {
+    background: url('../img/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+.featured-destinations {
+    margin: 50px 0;
+}
+
+.destination-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.call-to-action {
+    background-color: #007bff;
+    color: white;
+    padding: 50px 20px;
+}
+
+.call-to-action h2 {
+    font-size: 2rem;
+}
+
+.testimonials {
+    margin: 50px 0;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimonial-card {
+    width: 30%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.testimonial-card p {
+    font-style: italic;
+}

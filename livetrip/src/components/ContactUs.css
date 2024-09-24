@@ -1,0 +1,47 @@
+/* src/components/ContactUs.css */
+.contact-us {
+    padding: 2rem;
+  }
+  
+  .contact-us .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-form {
+    margin-top: 2rem;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-form .form-group input,
+  .contact-form .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .contact-form .form-group textarea {
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    margin-top: 1rem;
+  }
+  
+  .map {
+    margin-top: 2rem;
+  }
+  

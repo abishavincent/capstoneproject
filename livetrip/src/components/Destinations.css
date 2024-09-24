@@ -1,0 +1,36 @@
+
+/* src/components/Destinations.css */
+.destinations-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.page-heading {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  margin: 20px 0;
+}
+
+.destination-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.destination-card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.destination-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+

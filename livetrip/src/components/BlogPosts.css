@@ -1,0 +1,26 @@
+/* BlogPosts.css */
+
+/* Ensure carousel items take up full height and width of the screen */
+.carousel-item {
+  height: 100vh; /* 100% of viewport height */
+}
+
+.carousel-item img {
+  object-fit: cover; /* Ensures the image covers the entire area */
+  height: 100%; /* 100% of parent height */
+  width: 100%; /* 100% of parent width */
+}
+
+/* Adjust caption text positioning and size */
+.carousel-caption {
+  bottom: 20px; /* Position caption closer to the bottom */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds text shadow for better visibility */
+}
+
+.carousel-caption h5 {
+  font-size: 2.5rem;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+}
