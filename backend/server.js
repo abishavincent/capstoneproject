@@ -21,34 +21,37 @@ mongoose.connect(process.env.MONGO_URL).then(() => console.log('MongoDB connecte
 
 // Register endpoint
 app.post('/api/register', async (req, res) => {
-  const { username, password } = req.body;
+  const { username, email, password} = req.body;
 
-  if (!username || !password) {
+  if (!username || !email || !password) {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = new User({ username, password: hashedPassword });
+    const newUser = new User({ username, email, password: hashedPassword });
     await newUser.save();
     res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
     console.error('Error during registration:', error);
+    if (error.code === 11000) {
+      return res.status(409).json({ message: 'Email already exists' });
+    }
     res.status(500).json({ message: 'Server error' });
   }
 });
 
 // Sign-In endpoint
 app.post('/api/signin', async (req, res) => {
-  const { username, password } = req.body;
+  const { username, email, password } = req.body;
 
-  if (!username || !password) {
+  if (!username || !email || !password) {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
   try {
     // Find the user in the database
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ email });
     if (!user) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }

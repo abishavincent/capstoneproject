@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Signin({ setIsLoggedIn }) {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -16,7 +17,7 @@ function Signin({ setIsLoggedIn }) {
     setErrorMessage('');
     setSuccessMessage('');
     
-    if (!username || !password) {
+    if (!username || !email || !password) {
       setErrorMessage('Please fill in all fields.');
       return;
     }
@@ -27,7 +28,7 @@ function Signin({ setIsLoggedIn }) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, email, password }),
       });
 
       if (!response.ok) {
@@ -51,7 +52,7 @@ function Signin({ setIsLoggedIn }) {
     setErrorMessage('');
     setSuccessMessage('');
     
-    if (!username || !password) {
+    if (!username || !email || !password) {
       setErrorMessage('Please fill in all fields.');
       return;
     }
@@ -62,7 +63,7 @@ function Signin({ setIsLoggedIn }) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, email, password }),
       });
 
       if (!response.ok) {
@@ -103,6 +104,18 @@ function Signin({ setIsLoggedIn }) {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Enter username"
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter email"
             required
           />
         </div>
